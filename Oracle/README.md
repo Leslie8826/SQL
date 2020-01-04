@@ -10,3 +10,7 @@ We are given an excel file, HR_data.xlsx, with a lot of data on a company's empl
   - Insert the data that appear in the excel file into the newly created database
   - Query the data from the database to get the information needed
   - Use Tableau Software to visualize the data
+
+## How we did it
+1. Brainstorming
+We analyzed
