@@ -12,10 +12,11 @@ We are given an excel file, HR_data.xlsx, with a lot of data on a company's empl
   - Use Tableau Software to visualize the data
 
 ## How we did it
-<b> 1. Brainstorming <b> <br>
+1. Brainstorming <br>
 We analyzed the excel file and came up with a list of categories based upon the type of data. Each category would represent a table in our database. We wrote everyting on paper.
 
-<b> 2. Designing the database model <b> <br>
+2. Designing the database model <br>
 We draw each table on paper and added the relationships between tables when necessary, which formed our data model. Then we draw our data model in SQL Modeler.
 
-3.
+3. Database creation
+
