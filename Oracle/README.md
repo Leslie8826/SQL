@@ -1,1 +1,12 @@
+# Database Design and Management
 
+## Author: 
+Leslie8826
+
+## Overview
+We are given an excel file with a lot of data on a company's employees. We are asked to:
+  - Design a database model according to the excel file
+  - Create a database from the model created
+  - Insert the data that appear in the excel file into the newly created database
+  - Query the data from the database to get the information needed
+  - 
