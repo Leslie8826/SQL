@@ -18,15 +18,15 @@ We analyzed the excel file and came up with a list of categories based upon the 
 2. Designing the database model <br>
 We draw each table on paper and added the relationships between tables when necessary, which formed our data model. Then we draw our data model in Oracle Data Modeler.
 
-3. Creation of our database
+3. Creation of our database <br>
 We created our database with ddl statements in Oracle SQL Developer from the database model built in point 2.
 
-4. Creation of stage table
+4. Creation of stage table <br>
 We also creates a stage table where we inserted all the data that exist from the excel file HR_Data.xlsx.
 
-5. Populating the database
+5. Populating the database <br>
 We inserted the data in the tables of our database with dml statements. The data inserted came from the stage table.
 
-6. Analysis
+6. Analysis <br>
 With dml statements we could query the table and get the information we needed to get the company analyzed.
 
