@@ -1,6 +1,6 @@
 # Database Design and Management
 
-## Author: 
+## Author
 Leslie8826
 
 ## Overview
