@@ -4,7 +4,10 @@
 Leslie8826
 
 ## Overview
-We are given an excel file, HR_data.xlsx, with a lot of data on a company's employees. We are asked to:
+We are given an excel file, HR_data.xlsx, with a lot of data on a company's employees. The purpose of this project is to analyse the data according to some requirements.
+
+## Requirements 
+We are asked to:
   - Design a database model according to the excel file
   - Create a database from the model created
   - Insert the data that appear in the excel file into the tables of the newly created database
@@ -29,4 +32,3 @@ We inserted the data in the tables of our database with dml statements. The data
 
 6. Analysis <br>
 With dml statements we could query the table and get the information we needed to get the company analyzed.
-
