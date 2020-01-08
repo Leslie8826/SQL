@@ -7,3 +7,4 @@ To get the data loaded in a table, we did the following:
    - we selected the columns to import from the data set and arrange them in the order we wanted. At this stage we could select  at minimum one column or all of them. We selected all the columns that are in the HR_Data.xlsx 
    - for each column, we defined the column details of the table that would be created
    - we validated the creation of the stage table by clicking on the finish button
+   - if an error occurred, we simply redid the process and changed what needed to be changed
