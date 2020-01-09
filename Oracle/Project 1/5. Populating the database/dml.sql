@@ -16,6 +16,5 @@ insert into hr2_country(country_id, country_name, region_id)
     select distinct country_id, country_name, region_id
     from hr_stage
 
-
 /* OUTPUT FOR HR2_COUNTRY */
 select * from hr2_country
