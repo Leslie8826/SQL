@@ -11,3 +11,8 @@ We also created a stage table where we inserted all the data that exist from the
    - once all errors were taken care of, we checked if the table called HR_STAGE appeared in the Table section of SQL Developer
    - we querryed the table to check if the data were inside. An example of a query: 
       select * from hr_stage
+
+
+Comment:
+ - null values were assigned with 0 in country_id column (to respect the uniqueness constraint of the primary key in the tables we would create later. in that case hr2_country)
+ - null values were assigned with 'NONE' in region_id column (to respect the uniqueness constraint of the primary key in the tables we would create later. in that case, hr2_region)
