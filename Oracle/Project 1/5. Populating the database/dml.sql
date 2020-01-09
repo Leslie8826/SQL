@@ -18,3 +18,13 @@ insert into hr2_country(country_id, country_name, region_id)
 
 /* OUTPUT FOR HR2_COUNTRY */
 select * from hr2_country
+
+
+/* 3RD TABLE TO POPULATE */
+/* POPULATING HR2_LOCATION */
+insert into hr2_location(location_id, street_address, postal_code, city, state_province, country_id)
+    select distinct location_id, street_address, postal_code, city, state_province, country_id
+    from hr_stage
+    
+/* OUTPUT FOR HR2_LOCATION */
+select * from hr2_location
