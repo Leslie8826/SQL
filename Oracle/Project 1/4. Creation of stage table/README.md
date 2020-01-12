@@ -16,7 +16,8 @@ We also created a stage table where we inserted all the data that exist from the
  <br> Convention on some data in HR_STAGE table:
    - null values were assigned with 'NONE' in country_id column (to respect the uniqueness constraint of the primary key in the tables we would create later. in that case hr2_country)
    - null values were assigned with 0 in region_id column (to respect the uniqueness constraint of the primary key in the tables we would create later. in that case, hr2_region)
-   - null values were replaced with unique values greater or equal than 9000 starting at 9000 in location_id column (to respect the uniqueness constraint of the primary key in the tables we would create later. in that case, hr2_location)
-   - null values were replaced with unique values greater or equal than 800 starting at 800 in department_id column (to respect the uniqueness constraint of the primary key in the tables we would create later. in that case, hr2_department)
-   - null values were replaced with unique values greater or equal than 300 starting at 300 in management_id column (to respect the uniqueness constraint of the primary key in the tables we would create later. in that case, hr2_department)
+   - null values were replaced with unique values greater or equal than 9000 starting at 9000 in location_id column (to respect the uniqueness constraint of the primary key in the tables we would insert values to later. in that case, hr2_location)
+   - null values were replaced with unique values greater or equal than 800 starting at 800 in department_id column (to respect the uniqueness constraint of the primary key in the tables we would insert values to later. in that case, hr2_department)
+   - null values were replaced with unique values greater or equal than 300 starting at 300 in management_id column (to respect the uniqueness constraint of the primary key in the tables we would insert values to later. in that case, hr2_department)
+   - some of department_id values were changed so that there is a manager per department or a manager_id per department_id (to respect the uniqueness constraint of the primary key in the tables we would insert values to later. in that case, hr2_department)
    
