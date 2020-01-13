@@ -40,7 +40,7 @@ insert into hr2_department(department_id, department_name, manager_id, location_
 select * from hr2_department
 
 
-/* 6TH TABLE TO POPULATE */
+/* 5TH TABLE TO POPULATE */
 /* POPULATING HR2_JOB_HIST */
 insert into hr2_job_hist(employee_id, start_date, end_date, job_id, department_id)
     select distinct employee_id, start_date, end_date, job_id, department_id
@@ -50,7 +50,7 @@ insert into hr2_job_hist(employee_id, start_date, end_date, job_id, department_i
     select * from hr2_job_hist
 
 
-/* 7TH TABLE TO POPULATE */
+/* 6TH TABLE TO POPULATE */
 /* POPULATING HR2_EMPLOYEE */
 insert into hr2_employee(employee_id, first_name, last_name, email, phone_number, hire_date, job_id, salary, 
                            commission_pct, manager_id, department_id)
