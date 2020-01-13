@@ -38,3 +38,13 @@ insert into hr2_department(department_id, department_name, manager_id, location_
 
 /* OUTPUT FOR HR2_DEPARTMENT CAN BE SEE WITH THE FOLLOWING */
 select * from hr2_department
+
+
+/* 6TH TABLE TO POPULATE */
+/* POPULATING HR2_JOB_HIST */
+insert into hr2_job_hist(employee_id, start_date, end_date, job_id, department_id)
+    select distinct employee_id, start_date, end_date, job_id, department_id
+    from hr_stage
+    
+    select * from hr2_job_hist
+
