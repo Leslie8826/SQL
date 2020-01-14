@@ -16,7 +16,7 @@ from hr2_employee
 where hire_date > '01-JAN-98' and hire_date < '31-DEC-99'
 
 
-/* Display first name and join date of the employees who is either IT Programmer or Sales
+/* Q3. Display first name and join date of the employees who is either IT Programmer or Sales
 Man. */
 select hr2_employee.first_name, hr2_employee.hire_date, hr2_job.job_title
 from hr2_employee
