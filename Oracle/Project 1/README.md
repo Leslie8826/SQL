@@ -31,4 +31,5 @@ We also creates a stage table where we inserted all the data that exist from the
 We inserted the data in the tables of our database with dml statements. The data inserted came from the stage table.
 
 6. Analysis <br>
-With dml statements we could query the table and get the information we needed to get the company analyzed.
+With dml statements we could query the table and get the information we needed to get the company analyzed.<br>
+We also visualized the data queries with Tableau Software
