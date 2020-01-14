@@ -32,4 +32,4 @@ We inserted the data in the tables of our database with dml statements. The data
 
 6. Analysis <br>
 With dml statements we could query the table and get the information we needed to get the company analyzed.<br>
-We also visualized the data queries with Tableau Software
+We also visualized the data queries with Tableau Software.
