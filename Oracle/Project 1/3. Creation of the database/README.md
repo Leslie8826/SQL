@@ -1,4 +1,4 @@
-###3. Creation of our database
+### 3. Creation of our database
 We created our database with ddl statements using Oracle SQL Developer from the database model built in point 2. The output after running the statements can be seen in output.txt
 
 <br>
