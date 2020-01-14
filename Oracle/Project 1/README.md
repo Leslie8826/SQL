@@ -15,21 +15,21 @@ We are asked to:
   - Use Tableau Software to visualize the data
 
 ## Our approach
-1. Brainstorming <br>
+### 1. Brainstorming
 We analyzed the excel file and came up with a list of categories based upon the type of data. Each category would represent a table in our database. We wrote everyting on paper.
 
-2. Designing the database model <br>
+### 2. Designing the database model
 We draw each table on paper and added the relationships between tables when necessary, which formed our data model. Then we draw our data model in Oracle Data Modeler.
 
-3. Creation of our database <br>
+### 3. Creation of our database
 We created our database with ddl statements in Oracle SQL Developer from the database model built in point 2.
 
-4. Creation of stage table <br>
+### 4. Creation of stage table
 We also creates a stage table where we inserted all the data that exist from the excel file HR_Data.xlsx.
 
-5. Populating the database <br>
+### 5. Populating the database
 We inserted the data in the tables of our database with dml statements. The data inserted came from the stage table.
 
-6. Analysis <br>
+### 6. Data visualization
 With dml statements we could query the table and get the information we needed to get the company analyzed.<br>
 We also visualized the data queries with Tableau Software.
