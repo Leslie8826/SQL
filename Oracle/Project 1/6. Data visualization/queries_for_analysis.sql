@@ -23,3 +23,9 @@ from hr2_employee
 inner join hr2_job
 on hr2_employee.job_id = hr2_job.job_id
 where job_title like 'Sal%' or job_title like 'Prog%'
+
+
+/* Q4. Display employees who joined after 1st January 2000. */
+select * 
+from hr2_employee
+where hire_date > '01-JAN-2000'
