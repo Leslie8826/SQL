@@ -67,5 +67,11 @@ from hr2_employee
 where first_name like 'S%' or last_name like 'S%'
 
 
+/* Q11. Display employees who joined in the month of May. */
+select *
+from hr2_employee
+where extract(month from hire_date) = 5
+
+
 
 
