@@ -83,8 +83,12 @@ where commission_pct = 0 and salary <10000 and salary > 5000  and department_id 
 
 
 /*Q13. Display first name and date of first salary of the employees.*/
-select hr2_employee.first_name, hr2_job_hist.start_date+30
+/* version 1 */
+select hr2_employee.first_name, hr2_job_hist.start_date+30 first_day_salary -- salary after a month of work 
 from hr2_job_hist
 inner join hr2_employee
 on hr2_job_hist.employee_id = hr2_employee.employee_id
 
+/* version 2 */
+select first_name, last_day(hire_date) first_day_salary -- salary at the end of the month of hire date
+from hr2_employee
