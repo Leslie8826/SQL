@@ -105,3 +105,9 @@ order by last_name asc
 
 
 
+/* Q15. Display first name of employees who joined in 2001. */
+select *
+from hr2_employee
+where extract(year from hire_date) = 2001
+
+
