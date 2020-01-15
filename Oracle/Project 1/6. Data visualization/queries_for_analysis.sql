@@ -123,3 +123,8 @@ select job_title, substr(job_title, 1, instr(job_title, ' ')-1)
 from hr2_job
 where job_title is not null
 
+
+/* Q25. Display number of employees joined after 15th of the month. */
+select count(employee_id) number_of_employee
+from hr2_employee
+where extract(day from hire_date) > 15
