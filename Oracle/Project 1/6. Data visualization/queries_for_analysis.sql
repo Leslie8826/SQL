@@ -29,3 +29,9 @@ where job_title like 'Sal%' or job_title like 'Prog%'
 select first_name, last_name, hire_date
 from hr2_employee
 where hire_date > '01-JAN-2000'
+
+
+/* Q5. Display details of employee with ID 150 or 160. */
+select *
+from hr2_employee
+where employee_id=150 or employee_id=160
