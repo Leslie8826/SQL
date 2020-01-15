@@ -118,3 +118,8 @@ from hr2_employee
 where last_name is not null
 
 
+/*Q17. Display the first word in job title. */
+select job_title, substr(job_title, 1, instr(job_title, ' ')-1)
+from hr2_job
+where job_title is not null
+
