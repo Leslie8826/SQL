@@ -60,3 +60,12 @@ select *
 from hr2_job
 order by job_title desc
 
+
+/*  Q10. Display employees where the first name or last name starts with S. */
+select *
+from hr2_employee
+where first_name like 'S%' or last_name like 'S%'
+
+
+
+
