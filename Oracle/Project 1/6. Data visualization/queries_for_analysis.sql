@@ -111,3 +111,10 @@ from hr2_employee
 where extract(year from hire_date) = 2001
 
 
+/* Q16. Display first name and last name after converting the first letter of each name to upper
+case and the rest to lower case. */
+select initcap(first_name || ' ' || last_name) full_name
+from hr2_employee
+where last_name is not null
+
+
