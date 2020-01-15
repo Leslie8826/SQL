@@ -53,3 +53,10 @@ where max_salary < 20000 and max_salary > 10000
 /* Q8. Display first name, salary, and round the salary to thousands. */
 select first_name, round(salary, -3)
 from hr2_employee
+
+
+/* Q9. Display details of jobs in the descending order of the title. */
+select * 
+from hr2_job
+order by job_title desc
+
