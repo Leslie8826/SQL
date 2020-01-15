@@ -35,3 +35,21 @@ where hire_date > '01-JAN-2000'
 select *
 from hr2_employee
 where employee_id=150 or employee_id=160
+
+
+/* Q6. Display first name, salary, commission pct, and hire date for employees with salary less than 10000. */
+select distinct first_name, salary, commission_pct, hire_date
+from hr2_employee
+where salary<10000
+
+
+/* Q7. Display job Title, the difference between minimum and maximum salaries for jobs with
+max salary in the range 10000 to 20000. */
+select job_title, (max_salary-min_salary)
+from hr2_job
+where max_salary < 20000 and max_salary > 10000
+
+
+/* Q8. Display first name, salary, and round the salary to thousands. */
+select first_name, round(salary, -3)
+from hr2_employee
