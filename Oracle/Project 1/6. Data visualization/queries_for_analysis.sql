@@ -26,6 +26,6 @@ where job_title like 'Sal%' or job_title like 'Prog%'
 
 
 /* Q4. Display employees who joined after 1st January 2000. */
-select * 
+select first_name, last_name, hire_date
 from hr2_employee
 where hire_date > '01-JAN-2000'
