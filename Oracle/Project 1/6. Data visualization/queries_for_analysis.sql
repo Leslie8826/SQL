@@ -74,4 +74,11 @@ where extract(month from hire_date) = 5
 
 
 
+/* Q12. Display details of the employees where commission percentage is null and salary in the 
+range 5000 to 10000 and department is 50.*/
+select *
+from hr2_employee
+where commission_pct = 0 and salary <10000 and salary > 5000  and department_id = 50
+
+
 
