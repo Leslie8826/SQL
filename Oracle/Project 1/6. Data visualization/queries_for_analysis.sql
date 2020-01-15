@@ -92,3 +92,11 @@ on hr2_job_hist.employee_id = hr2_employee.employee_id
 /* version 2 */
 select first_name, last_day(hire_date) first_day_salary -- salary at the end of the month of hire date
 from hr2_employee
+
+
+/*14. Display first name and experience of the employees.*/
+select distinct hr2_employee.first_name, hr2_employee.last_name, hr2_job_hist.start_date, hr2_job_hist.end_date
+from hr2_employee
+inner join hr2_job_hist
+on hr2_employee.employee_id = hr2_job_hist.employee_id
+order by last_name asc
