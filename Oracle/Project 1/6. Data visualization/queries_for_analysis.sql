@@ -128,3 +128,12 @@ where job_title is not null
 select count(employee_id) number_of_employee
 from hr2_employee
 where extract(day from hire_date) > 15
+
+
+/* 26. Display the country ID and number of cities we have in the country. */
+select country_id, count(city) number_of_cities
+from hr2_location
+group by country_id
+
+
+
