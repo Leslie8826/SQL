@@ -95,11 +95,13 @@ from hr2_employee
 
 
 /* 14. Display first name and experience of the employees. */
-select distinct hr2_employee.first_name, hr2_employee.last_name, hr2_job.job_title, hr2_department.department_name , hr2_job_hist.start_date, hr2_job_hist.end_date
+select distinct hr2_employee.first_name, hr2_employee.last_name, hr2_job.job_title, hr2_department.department_name,
+                 hr2_employee.hire_date, hr2_job_hist.start_date, hr2_job_hist.end_date
 from hr2_employee
 inner join hr2_job_hist on hr2_employee.employee_id = hr2_job_hist.employee_id
 inner join hr2_job on hr2_employee.job_id = hr2_job.job_id
 inner join hr2_department on hr2_employee.department_id = hr2_department.department_id
 order by last_name asc
+
 
 
