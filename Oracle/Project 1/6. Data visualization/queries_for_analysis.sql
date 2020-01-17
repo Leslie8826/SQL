@@ -124,6 +124,15 @@ from hr2_job
 where job_title is not null
 
 
+
+
+/* 23. Display manager ID and number of employees managed by the manager. */
+select count(employee_id) nb_employee, manager_id
+from hr2_employee
+group by manager_id
+
+
+
 /* Q25. Display number of employees joined after 15th of the month. */
 select count(employee_id) number_of_employee
 from hr2_employee
