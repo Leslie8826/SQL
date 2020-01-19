@@ -94,7 +94,7 @@ select first_name, last_day(hire_date) first_day_salary -- salary at the end of 
 from hr2_employee
 
 
-/* 14. Display first name and experience of the employees. */
+/* Q14. Display first name and experience of the employees. */
 select distinct hr2_employee.first_name, hr2_employee.last_name, hr2_job.job_title, hr2_department.department_name,
                  hr2_employee.hire_date, hr2_job_hist.start_date, hr2_job_hist.end_date
 from hr2_employee
@@ -124,13 +124,10 @@ from hr2_job
 where job_title is not null
 
 
-
-
-/* 23. Display manager ID and number of employees managed by the manager. */
+/* Q23. Display manager ID and number of employees managed by the manager. */
 select count(employee_id) nb_employee, manager_id
 from hr2_employee
 group by manager_id
-
 
 
 /* Q25. Display number of employees joined after 15th of the month. */
@@ -139,7 +136,7 @@ from hr2_employee
 where extract(day from hire_date) > 15
 
 
-/* 26. Display the country ID and number of cities we have in the country. */
+/* Q26. Display the country ID and number of cities we have in the country. */
 select country_id, count(city) number_of_cities
 from hr2_location
 group by country_id
