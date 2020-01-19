@@ -148,3 +148,13 @@ from hr2_employee
 group by hire_date
 having count(employee_id) > 10
 
+
+/* Q31. Display departments in which more than five employees have commission percentage.*/
+select department_name, count(employee_id) nb_of_employees
+from hr2_employee
+inner join hr2_department
+on hr2_employee.department_id = hr2_department.department_id
+where commission_pct is not null
+group by hr2_department.department_name
+having count(employee_id) > 5
+
