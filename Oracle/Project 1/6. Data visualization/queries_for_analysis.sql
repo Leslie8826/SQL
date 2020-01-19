@@ -142,4 +142,9 @@ from hr2_location
 group by country_id
 
 
+/* Q30. Display years in which more than 10 employees joined. */
+select count(employee_id) as nb_of_employees, extract(year from hire_date) as year_of_hire_date
+from hr2_employee
+group by hire_date
+having count(employee_id) > 10
 
