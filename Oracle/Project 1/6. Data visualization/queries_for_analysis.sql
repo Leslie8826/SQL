@@ -166,6 +166,16 @@ group by employee_id
 having count(job_id) > 1
 
 
+/* 69. Display the city of employee whose employee ID is 105. */
+select hr2_location.city, hr2_employee.last_name, hr2_employee.first_name, hr2_employee.employee_id
+from hr2_employee
+inner join hr2_department
+on hr2_employee.manager_id = hr2_department.manager_id
+inner join hr2_location
+on hr2_department.location_id = hr2_location.location_id
+where hr2_employee.employee_id = 105
+
+
 /* 70. Display third highest salary of all employees */
 select * from (
     select distinct salary
