@@ -164,3 +164,13 @@ select employee_id, count(job_id) nb_of_jobs
 from hr2_job_hist
 group by employee_id
 having count(job_id) > 1
+
+
+/* 70. Display third highest salary of all employees */
+select * from (
+    select distinct salary
+    from hr2_employee
+    where salary is not null
+    order by salary desc
+) where rownum <= 3;
+
