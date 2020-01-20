@@ -158,3 +158,9 @@ where commission_pct is not null
 group by hr2_department.department_name
 having count(employee_id) > 5
 
+
+/* 32. Display employee ID for employees who did more than one job in the past. */
+select employee_id, count(job_id) nb_of_jobs
+from hr2_job_hist
+group by employee_id
+having count(job_id) > 1
