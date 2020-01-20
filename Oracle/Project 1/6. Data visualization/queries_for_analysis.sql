@@ -166,6 +166,17 @@ group by employee_id
 having count(job_id) > 1
 
 
+/* 43. Display department name and manager first name. */
+select hr2_employee.last_name, hr2_employee.first_name, hr2_department.department_name, 
+       hr2_employee.job_id, hr2_job.job_title
+from hr2_employee
+inner join hr2_department
+on hr2_employee.manager_id = hr2_department.manager_id
+inner join hr2_job
+on hr2_employee.job_id = hr2_job.job_id
+where hr2_employee.job_id like '%MGR%' or hr2_employee.job_id like '%MAN%'
+
+
 /* 69. Display the city of employee whose employee ID is 105. */
 select hr2_location.city, hr2_employee.last_name, hr2_employee.first_name, hr2_employee.employee_id
 from hr2_employee
