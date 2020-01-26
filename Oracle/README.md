@@ -6,4 +6,4 @@ Analysis data of a company
 Analysis of data from a car in AI puposes
 
 ## Project 3
-Analysis of orders taken by a clients in a manga companies
+Analysis of orders taken by a clients in a manga company
