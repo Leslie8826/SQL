@@ -166,6 +166,15 @@ group by employee_id
 having count(job_id) > 1
 
 
+
+/* 41. Display department name and number of employees in the department. */
+select distinct hr2_department.department_name, count(hr2_employee.employee_id) nb_of_employees
+from hr2_department
+inner join hr2_employee
+on hr2_department.department_id = hr2_employee.department_id
+group by hr2_department.department_name
+
+
 /* 43. Display department name and manager first name. */
 select hr2_employee.last_name, hr2_employee.first_name, hr2_department.department_name, 
        hr2_employee.job_id, hr2_job.job_title
