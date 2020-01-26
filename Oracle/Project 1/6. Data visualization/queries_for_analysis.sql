@@ -191,7 +191,7 @@ select distinct department_name, department_id, greatest(salary) highest_salary_
                 , last_name, first_name, job_title
 from hr2_employee
 inner join hr2_job on hr2_employee.job_id = hr2_job.job_id
-inner join hr2_department using (department_id)
+inner join hr2_department using (department_id) -- performs an inner join between hr2_employee table and hr2_department table on the condition that hr2_employee.department_id is equal to hr2_department.department_id
 where salary is not null
 order by greatest(salary) asc
 
