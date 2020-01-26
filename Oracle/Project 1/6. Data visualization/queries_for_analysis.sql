@@ -186,6 +186,16 @@ on hr2_employee.job_id = hr2_job.job_id
 where hr2_employee.job_id like '%MGR%' or hr2_employee.job_id like '%MAN%'
 
 
+/* 68. Display the details of employees drawing the highest salary in the department. */
+select distinct department_name, department_id, greatest(salary) highest_salary_in_department
+                , last_name, first_name, job_title
+from hr2_employee
+inner join hr2_job on hr2_employee.job_id = hr2_job.job_id
+inner join hr2_department using (department_id)
+where salary is not null
+order by greatest(salary) asc
+
+
 /* 69. Display the city of employee whose employee ID is 105. */
 select hr2_location.city, hr2_employee.last_name, hr2_employee.first_name, hr2_employee.employee_id
 from hr2_employee
