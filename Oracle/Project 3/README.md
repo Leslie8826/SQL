@@ -1,2 +1,4 @@
-## Project 3
+# Project 3
 Analysis of orders taken by a clients in a manga company
+
+### UNDER CONSTRUCTION
