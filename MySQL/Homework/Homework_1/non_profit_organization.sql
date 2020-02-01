@@ -157,7 +157,10 @@ INSERT INTO volunteer VALUES (1,'Harry Smith','123 Main St, New York, NY',NULL),
 (9,'Paul Lewin','45 Harlem Drive, Bronx, NY','917 452 8888'),
 (10,'Sue Spencer','783 Fairfield Dr, Mahwah NJ','201 783 8837');
 
+-- checking if data are in the table
 select * from volunteer;
+
+
 
 
 --
@@ -165,7 +168,9 @@ select * from volunteer;
 -- 
 INSERT INTO task_type VALUES (1,'recurring'),(2,'packing'),(3,'transporting');
 
+-- checking if data are in the table
 select * from task_type;
+
 
 
 --
@@ -173,7 +178,10 @@ select * from task_type;
 -- 
 INSERT INTO task_status VALUES (1,'ongoing'),(2,'open'),(3,'closed'),(4,'pending');
 
+-- checking if data are in the table
 select * from task_status;
+
+
 
 --
 -- Data for packing_list table
@@ -189,7 +197,10 @@ INSERT INTO packing_list VALUES (1,'Major distribution','include all of the basi
 (9,'Basic Child care','Formula, clothes, toys for 50 children'),
 (10,'Medium Water','Medium shipment of water containers');
 
+-- checking if data are in the table
 select * from packing_list;
+
+
 
 --
 -- Data for packing_type table
@@ -200,7 +211,9 @@ INSERT INTO package_type VALUES (1,'basic medical'),
 (4,'shelter'),
 (5,'clothing');
 
+-- checking if data are in the table
 select * from package_type;
+
 
 
 --
@@ -218,6 +231,7 @@ INSERT INTO item VALUES (1,'spam',10,100),
 (11,'women\'s coat',134,476),
 (12,'sleeping bag',75,950);
 
+-- checking if data are in the table
 select * from item;
 
 
@@ -236,7 +250,9 @@ INSERT INTO task VALUES (101,NULL,1,1,'answer the telephone'),
 (109,5,2,2,'Prepare 80 clothing packages'),
 (110,NULL,3,2,'Take packages to the warehouse');
 
+-- checking if data are in the table
 select * from task;
+
 
 
 --
@@ -253,7 +269,10 @@ INSERT INTO assignment VALUES (1,101,'2019-07-01 09:00:00','2019-08-31 17:00:00'
 (8,102,'2019-08-01 12:00:00','2019-08-10 12:00:00'),
 (9,109,'2019-08-04 07:00:00','2019-08-04 22:00:00');
 
+-- checking if data are in the table
 select * from assignment;
+
+
 
 --
 -- Data for package table
@@ -269,7 +288,10 @@ INSERT INTO package VALUES (1,102,3,'2019-08-02 00:00:00',32),
 (9,106,3,'2019-07-31 00:00:00',103),
 (10,109,5,'2019-08-04 00:00:00',79);
 
+-- checking if data are in the table
 select * from package;
+
+
 
 --
 -- Data for package_contents table
@@ -289,6 +311,7 @@ insert into package_contents values
 (6, 1, 95),
 (10, 2, 45);
 
+-- checking if data are in the table
 select * from package_contents;
 
 
