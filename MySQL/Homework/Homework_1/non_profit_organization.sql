@@ -2,10 +2,10 @@ create database non_profit_organization;
 
 use non_profit_organization;
 
-/**********************************/
+/**************************************/
 /******* CREATING THE TABLES **********/
-/*******  DDL STATEMENTS **********/
-/**********************************/
+/*******  DDL STATEMENTS **************/
+/**************************************/
 
 --
 -- TABLE STRUCTURE FOR 'VOLUNTEER'
