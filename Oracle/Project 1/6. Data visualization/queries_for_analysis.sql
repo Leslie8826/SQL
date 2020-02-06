@@ -186,6 +186,14 @@ on hr2_employee.job_id = hr2_job.job_id
 where hr2_employee.job_id like '%MGR%' or hr2_employee.job_id like '%MAN%'
 
 
+/* 47. Display job title and average salary of employees */
+select hr2_job.job_title, avg(hr2_employee.salary)
+from hr2_employee
+inner join hr2_job
+on hr2_employee.job_id = hr2_job.job_id
+group by hr2_job.job_title
+
+
 /* 68. Display the details of employees drawing the highest salary in the department. */
 select distinct department_name, department_id, greatest(salary) highest_salary_in_department
                 , last_name, first_name, job_title
