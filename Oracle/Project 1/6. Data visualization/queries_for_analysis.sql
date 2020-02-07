@@ -186,6 +186,19 @@ on hr2_employee.job_id = hr2_job.job_id
 where hr2_employee.job_id like '%MGR%' or hr2_employee.job_id like '%MAN%'
 
 
+/* 46. Display job title, department name, employee last name, starting date for all jobs from
+2000 to 2005. */
+select hr2_job.job_title, hr2_department.department_name, hr2_employee.last_name, hr2_job_hist.start_date
+from hr2_employee
+inner join hr2_job
+on hr2_employee.job_id = hr2_job.job_id
+inner join hr2_job_hist
+on hr2_job.job_id = hr2_job_hist.job_id
+inner join hr2_department
+on hr2_department.department_id = hr2_job_hist.department_id
+where extract (year from start_date) > 2000 and extract (year from start_date) < 2005
+
+
 /* 47. Display job title and average salary of employees */
 select hr2_job.job_title, avg(hr2_employee.salary)
 from hr2_employee
