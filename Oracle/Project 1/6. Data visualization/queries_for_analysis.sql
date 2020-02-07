@@ -166,6 +166,17 @@ group by employee_id
 having count(job_id) > 1
 
 
+/* 33. Display job ID of jobs that were done by more than 3 employees for more than 100 days. */
+select hr2_job.job_id, count(hr2_employee.employee_id) nb_of_days_in_jobs
+from hr2_job
+inner join hr2_employee
+on hr2_job.job_id = hr2_employee.job_id
+inner join hr2_job_hist
+on hr2_job.job_id = hr2_job_hist.job_id
+where (end_date - start_date) > 100
+group by hr2_job.job_id
+having count(hr2_employee.employee_id) > 3
+
 
 /* 41. Display department name and number of employees in the department. */
 select distinct hr2_department.department_name, count(hr2_employee.employee_id) nb_of_employees
