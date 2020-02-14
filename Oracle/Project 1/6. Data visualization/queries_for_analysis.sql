@@ -130,7 +130,7 @@ from hr2_employee
 where extract(year from hire_date) < 2000
 
 
-/* 22. Display how many employees joined in each month of the current year. */
+/* 22. Display how many employees joined in each month of year 1997. */
 select extract(month from hire_date) month_in_year_1997, count(employee_id) nb_employees_hired
 from hr2_employee
 where hire_date < '31-DEC-1997' and hire_date > '01-JAN-1997'
