@@ -124,6 +124,12 @@ from hr2_job
 where job_title is not null
 
 
+/* Q20. Display employees who joined before the year 2000 */
+select employee_id, last_name, first_name, hire_date
+from hr2_employee
+where extract(year from hire_date) < 2000
+
+
 /* Q23. Display manager ID and number of employees managed by the manager. */
 select count(employee_id) nb_employee, manager_id
 from hr2_employee
