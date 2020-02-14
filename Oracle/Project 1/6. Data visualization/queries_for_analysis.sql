@@ -130,6 +130,14 @@ from hr2_employee
 where extract(year from hire_date) < 2000
 
 
+/* 22. Display how many employees joined in each month of the current year. */
+select extract(month from hire_date) month_in_year_1997, count(employee_id) nb_employees_hired
+from hr2_employee
+where hire_date < '31-DEC-1997' and hire_date > '01-JAN-1997'
+group by extract(month from hire_date)
+order by month_in_year_1997 asc
+
+
 /* Q23. Display manager ID and number of employees managed by the manager. */
 select count(employee_id) nb_employee, manager_id
 from hr2_employee
