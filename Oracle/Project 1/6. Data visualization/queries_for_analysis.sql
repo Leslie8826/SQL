@@ -192,6 +192,13 @@ group by hr2_job.job_id
 having count(hr2_employee.employee_id) > 3
 
 
+/* Display department ID, year, and Number of employees joined. */
+select department_id, extract (year from hire_date) as year_hired, count (employee_id) as number_of_employees
+from hr2_employee
+where extract (year from hire_date) is not null
+group by extract (year from hire_date), department_id
+
+
 /* 41. Display department name and number of employees in the department. */
 select distinct hr2_department.department_name, count(hr2_employee.employee_id) nb_of_employees
 from hr2_department
