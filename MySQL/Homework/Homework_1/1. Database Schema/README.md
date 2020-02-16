@@ -1,4 +1,4 @@
-# Database schema
+# 1. Database schema
 
 A few tips to understand the schema:
  - underlined and bold attribute : primary key
