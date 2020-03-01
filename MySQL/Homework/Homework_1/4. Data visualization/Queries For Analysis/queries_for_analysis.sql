@@ -16,3 +16,12 @@ where itemDescription = 'bottle of morphine';
 select *
 from volunteer
 where volunteerAddress not like '%NY' and volunteerAddress not like '%NJ'
+
+
+# Q3 - Which volunteers are working on open tasks?
+select t1.volunteerName, t3.taskDescription, t4.taskStatusName
+from volunteer as t1
+inner join assignment as t2 on t1.volunteerId = t2.volunteerId
+inner join task as t3 on t2.taskCode = t3.taskCode
+inner join task_status as t4 on t3.taskStatusId = t4.taskStatusId
+where t4.taskStatusName = 'open';
