@@ -166,6 +166,15 @@ where commission_pct is not null
 group by department_name
 
 
+/* 28. Display job ID, number of employees, sum of salary, and difference between highest
+salary and lowest salary of the employees of the job. */
+select distinct t1.job_id, count(employee_id) as nb_employees, sum(salary) as sum_of_salaries, (max(t1.max_salary) - min(t1.min_salary)) as salary_difference
+from hr2_job t1
+inner join hr2_employee t2
+on t1.job_id = t2.job_id
+group by t1.job_id
+
+
 /* Q30. Display years in which more than 10 employees joined. */
 select count(employee_id) as nb_of_employees, extract(year from hire_date) as year_of_hire_date
 from hr2_employee
