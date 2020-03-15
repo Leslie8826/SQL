@@ -156,6 +156,16 @@ from hr2_location
 group by country_id
 
 
+/* 27. Display average salary of employees in each department who have commission
+percentage. */
+select distinct department_name, round(avg(salary), 3)
+from hr2_employee
+inner join hr2_department
+on hr2_employee.department_id = hr2_department.department_id
+where commission_pct is not null
+group by department_name
+
+
 /* Q30. Display years in which more than 10 employees joined. */
 select count(employee_id) as nb_of_employees, extract(year from hire_date) as year_of_hire_date
 from hr2_employee
