@@ -274,6 +274,15 @@ group by employee_id
 having count(hire_date) = 0                                     
               
                                       
+ /* 61. Display job title and average salary for employees who did a job in the past. */
+select round(avg(hr2_employee.salary), 3) average_salary, hr2_employee.job_id, hr2_job.job_title
+from hr2_employee
+inner join hr2_job
+on hr2_employee.job_id = hr2_job.job_id
+group by hr2_employee.job_id, hr2_job.job_title
+having count(hr2_employee.hire_date) > 0                                     
+                                      
+                                      
 /* 68. Display the details of employees drawing the highest salary in the department. */
 select distinct department_name, department_id, greatest(salary) highest_salary_in_department
                 , last_name, first_name, job_title
