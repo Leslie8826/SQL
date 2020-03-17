@@ -267,6 +267,12 @@ on hr2_job.job_id = hr2_employee.job_id
 where extract(year from hire_date) = 1997
        
                                       
+/* 60. Display employees who did not do any job in the past. */
+select employee_id
+from hr2_employee
+group by employee_id
+having count(hire_date) = 0                                     
+              
                                       
 /* 68. Display the details of employees drawing the highest salary in the department. */
 select distinct department_name, department_id, greatest(salary) highest_salary_in_department
