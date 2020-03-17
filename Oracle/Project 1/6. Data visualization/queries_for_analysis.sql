@@ -104,7 +104,6 @@ inner join hr2_department on hr2_employee.department_id = hr2_department.departm
 order by last_name asc
 
 
-
 /* Q15. Display first name of employees who joined in 2001. */
 select first_name
 from hr2_employee
@@ -259,6 +258,16 @@ on hr2_employee.job_id = hr2_job.job_id
 group by hr2_job.job_title
 
 
+                                      
+/* 59. Display jobs into which employees joined in year 1997. */
+select distinct job_title
+from hr2_job
+inner join hr2_employee
+on hr2_job.job_id = hr2_employee.job_id
+where extract(year from hire_date) = 1997
+       
+                                      
+                                      
 /* 68. Display the details of employees drawing the highest salary in the department. */
 select distinct department_name, department_id, greatest(salary) highest_salary_in_department
                 , last_name, first_name, job_title
