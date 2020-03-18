@@ -281,6 +281,20 @@ inner join hr2_job
 on hr2_employee.job_id = hr2_job.job_id
 group by hr2_employee.job_id, hr2_job.job_title
 having count(hr2_employee.hire_date) > 0                                     
+     
+                                      
+ /* 62. Display country name, city, and number of departments where department has more than
+5 employees. */
+select hr2_country.country_name, hr2_location.city, count(hr2_department.department_id) nb_of_departments
+from hr2_country
+inner join hr2_location on hr2_country.country_id = hr2_location.country_id
+inner join hr2_department on hr2_location.location_id = hr2_department.location_id
+inner join hr2_employee on hr2_department.manager_id = hr2_employee.manager_id
+where hr2_employee.department_id in (select department_id
+                                    from hr2_employee
+                                    group by department_id
+                                    having count(employee_id)>5)
+group by hr2_country.country_name, hr2_location.city                                     
                                       
                                       
 /* 68. Display the details of employees drawing the highest salary in the department. */
