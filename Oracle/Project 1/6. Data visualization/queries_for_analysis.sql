@@ -295,6 +295,15 @@ where hr2_employee.department_id in (select department_id
                                     group by department_id
                                     having count(employee_id)>5)
 group by hr2_country.country_name, hr2_location.city                                     
+            
+                                      
+/* 63. Display details of manager who manages more than 5 employees. */
+select hr2_employee.manager_id, hr2_department.location_id, hr2_department.department_name, count(hr2_employee.employee_id) as nb_of_employees
+from hr2_employee
+inner join hr2_department
+on hr2_employee.manager_id = hr2_department.manager_id
+group by hr2_employee.manager_id, hr2_department.location_id, hr2_department.department_name
+having count(hr2_employee.employee_id) > 5
                                       
                                       
 /* 68. Display the details of employees drawing the highest salary in the department. */
